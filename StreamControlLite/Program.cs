@@ -23,7 +23,7 @@ namespace StreamControlLite
             {
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - Kimi nanda kara (MV).mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - 星フルWISH (MV).mp4"),
-                new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - Kimi nanda kara (MV).mp4"),
+                new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - 3WD (MV).mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - 星フルWISH (MV).mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - Kimi nanda kara (MV).mp4"),
             };

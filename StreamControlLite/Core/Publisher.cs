@@ -14,7 +14,7 @@ namespace StreamControlLite.Core
             {
                 String rtmpTarget = target.ResolveTarget();
                 string app = "ffmpeg";
-                string command = $"-re  -loglevel error -i \\\\.\\pipe\\{Interconnection.instance().InterPipeName} -c copy -f flv {rtmpTarget}";
+                string command = $" -loglevel error -i \\\\.\\pipe\\{Interconnection.instance().InterPipeName} -c copy -f flv {rtmpTarget}";
                 ConsoleUtil.ExecuteBackgroundProcess(app, command);
             })).Start();
         }
