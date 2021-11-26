@@ -17,7 +17,8 @@ namespace StreamControlLite.Settings.Filters
             boxcolor,
             boxborderw,
             textfile,
-            box
+            box,
+            reload
         }
         
         public OptionName option { get; }

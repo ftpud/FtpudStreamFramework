@@ -54,21 +54,6 @@ namespace StreamControlLite.Core
             int payloadSizeIntBytes = FlvUtils.Convert3BytesToUInt24(payloadSize);
             byte[] payloadData = ReceiveDataFrame(socket, payloadSizeIntBytes);
 
-            //byte[] headerData = FlvUtils.Combine(sizeOfPrevPacket, packetType, payloadSize, timestampLower, timestampUpper, streamId);
-            
-            
-            //int curentTs = convertUint24(timestampLower);
-            //byte[] newTs = convertUint24ToBytes(streamTs);
-            
-            /*if (packetType[0] == 18)
-            {
-                Console.Write($"AMF: {payloadData[0]}\t");
-                if (startingTimestamp != 0)
-                {
-                    BinaryPrimitives.WriteUInt32BigEndian(sizeOfPrevPacket, 16);
-                }
-            }*/
-
             return new FlvFrame()
             {
                 payloadSize = payloadSize,

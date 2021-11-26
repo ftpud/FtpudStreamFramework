@@ -75,7 +75,7 @@ namespace StreamControlLite.Core
                     }
                     catch (Exception e)
                     {
-                        LogUtils.Log(LogLevel.Trace, "Broken pipe");
+                        LogUtils.Log(LogLevel.Debug, "Broken pipe");
                     }
                     preservedTs = lastTs;
                     streamNum++;

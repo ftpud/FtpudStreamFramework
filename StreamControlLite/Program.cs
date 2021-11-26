@@ -22,11 +22,13 @@ namespace StreamControlLite
             Decorator.instance().AddGlobalFilter(new ScaleFilter(1920, 1080));
             Decorator.instance().AddGlobalFilter(new PadFilter(1920, 1080));
             
+            Extensions.InfoBox.instance().Init();
+            
             Interconnection.instance().Init();
             Transmitter.instance().Init();
 
             Publisher publisher = new Publisher();
-            publisher.RunPublisher(new StreamPreviewRtmpTarget());
+            publisher.RunPublisher(new StreamRtmpTarget("rtmp://192.168.0.129/test"));
 
             List<FileSourceEntity> playList = new List<FileSourceEntity>()
             {
@@ -50,7 +52,8 @@ namespace StreamControlLite
             while (true)
             {
                 String input = Console.ReadLine();
-                InputProcessor.Instance().Stop();
+                Extensions.InfoBox.instance().Push(input);
+                //InputProcessor.Instance().Stop();
             }
             
         }

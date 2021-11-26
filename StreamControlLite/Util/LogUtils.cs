@@ -6,11 +6,12 @@ namespace StreamControlLite.Util
     public enum LogLevel
     {
         Silent = 0,
-        Verbose = 1,
-        Trace = 2
+        Verbose = 4,
+        Debug = 8,
+        Trace = 12
     }
 
-    public class LogUtils
+    public static class LogUtils
     {
         public static void Log(LogLevel level, String log)
         {
