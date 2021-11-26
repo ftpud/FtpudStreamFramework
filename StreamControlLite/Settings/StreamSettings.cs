@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualBasic;
 using StreamControlLite.Core;
-using StreamControlLite.Settings.Decoders;
+using StreamControlLite.Settings.Encoders;
 using StreamControlLite.Util;
 
 namespace StreamControlLite.Settings

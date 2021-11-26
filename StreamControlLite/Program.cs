@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using StreamControlLite.Core;
 using StreamControlLite.Settings;
-using StreamControlLite.Settings.Decoders;
+using StreamControlLite.Settings.Encoders;
 using StreamControlLite.Settings.Filters;
 using StreamControlLite.Source;
 using StreamControlLite.Target;

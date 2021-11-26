@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StreamControlLite.Settings.Decoders
+namespace StreamControlLite.Settings.Encoders
 {
     public class BaseVideoEncoder
     {

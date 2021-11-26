@@ -1,4 +1,4 @@
-﻿namespace StreamControlLite.Settings.Decoders
+﻿namespace StreamControlLite.Settings.Encoders
 {
     public class NvencVideoEncoder : BaseVideoEncoder
     {
