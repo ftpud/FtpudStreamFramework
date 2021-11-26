@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using StreamControlLite.Core;
+using StreamControlLite.Settings;
+using StreamControlLite.Settings.Decoders;
+using StreamControlLite.Settings.Filters;
 using StreamControlLite.Source;
 using StreamControlLite.Target;
 using StreamControlLite.Util;
@@ -12,6 +15,12 @@ namespace StreamControlLite
         static void Main(string[] args)
         {
             LogUtils.Log(LogLevel.Verbose,"Init");
+
+            StreamSettings.AudioDecoder = new AacAudioDecoder(320, 44100);
+            StreamSettings.VideoDecoder = new NvencVideoDecoder(8000, 30);
+            
+            Decorator.instance().AddGlobalFilter(new ScaleFilter(1920, 1080));
+            Decorator.instance().AddGlobalFilter(new PadFilter(1920, 1080));
             
             Interconnection.instance().Init();
             Transmitter.instance().Init();
@@ -21,8 +30,8 @@ namespace StreamControlLite
 
             List<FileSourceEntity> playList = new List<FileSourceEntity>()
             {
-                new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - Kimi nanda kara (MV).mp4"),
-                new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - 星フルWISH (MV).mp4"),
+                new FileSourceEntity("X:\\Japanese\\LiSA - Gurenge (PV).mp4"),
+                new FileSourceEntity("Q:\\_dav\\RequestOnly\\Geneki Idol ga Erabu! Shimakura Rika  Ririka - Scream.mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - 3WD (MV).mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - 星フルWISH (MV).mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - Kimi nanda kara (MV).mp4"),

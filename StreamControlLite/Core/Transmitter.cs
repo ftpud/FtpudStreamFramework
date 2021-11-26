@@ -3,13 +3,13 @@ using System.Buffers.Binary;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using StreamControlLite.Settings;
 using StreamControlLite.Util;
 
 namespace StreamControlLite.Core
 {
     public class Transmitter
     {
-        private int Port { get; set; } = 5051;
         public bool AwaitConnections { get; set; } = true;
         
         public void Init()
@@ -20,7 +20,7 @@ namespace StreamControlLite.Core
                 bool skipHeader = false;
                 int preservedTs = 0;
                 
-                TcpListener listener = new TcpListener(IPAddress.Any, Port);
+                TcpListener listener = new TcpListener(IPAddress.Any, StreamSettings.InternalCommunicationPort);
                 listener.Start();
                 int streamNum = 0;
                 

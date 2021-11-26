@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using StreamControlLite.Settings;
+using StreamControlLite.Settings.Filters;
 using StreamControlLite.Util;
 
 namespace StreamControlLite.Source
@@ -17,7 +19,22 @@ namespace StreamControlLite.Source
         {
             LogUtils.Log(LogLevel.Verbose, $"Playing: {_fileName}");
             
-            return StreamSettings.WrapInput($" -i \"{_fileName}\" ");
+            Decorator.instance().WithFilters(new []
+            {
+                new TextFilter(new []
+                {
+                    new TextFilterOption(TextFilterOption.OptionName.text, Path.GetFileName(_fileName)),
+                    new TextFilterOption(TextFilterOption.OptionName.fontcolor, "white@0.8"),
+                    new TextFilterOption(TextFilterOption.OptionName.fontsize, "35"),
+                    new TextFilterOption(TextFilterOption.OptionName.x, "2"),
+                    new TextFilterOption(TextFilterOption.OptionName.y, "2"),
+                    new TextFilterOption(TextFilterOption.OptionName.box, "1"),
+                    new TextFilterOption(TextFilterOption.OptionName.boxcolor, "black@0.4"),
+                    new TextFilterOption(TextFilterOption.OptionName.boxborderw, "4"),
+                })
+            });
+            
+            return CommandLineHelper.WrapInput($" -i \"{_fileName}\" ");
         }
     }
 }
