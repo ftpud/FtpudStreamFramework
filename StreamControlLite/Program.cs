@@ -32,9 +32,9 @@ namespace StreamControlLite
 
             List<FileSourceEntity> playList = new List<FileSourceEntity>()
             {
-                new FileSourceEntity("X:\\Japanese\\LiSA - Gurenge (PV).mp4"),
-                new FileSourceEntity("Q:\\_dav\\RequestOnly\\Geneki Idol ga Erabu! Shimakura Rika  Ririka - Scream.mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - 3WD (MV).mp4"),
+                new FileSourceEntity("Y:\\wasutahq\\wasuta - Meranyaizar [HQ].ts"),
+                new FileSourceEntity("Q:\\_dav\\RequestOnly\\Geneki Idol ga Erabu! Shimakura Rika  Ririka - Scream.mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - 星フルWISH (MV).mp4"),
                 new FileSourceEntity("Z:\\_idoling\\dl\\Task have Fun - Kimi nanda kara (MV).mp4"),
             };
@@ -53,7 +53,10 @@ namespace StreamControlLite
             {
                 String input = Console.ReadLine();
                 Extensions.InfoBox.instance().Push(input);
-                //InputProcessor.Instance().Stop();
+                if (input == "next")
+                {
+                    InputProcessor.Instance().Stop();
+                }
             }
             
         }

@@ -10,8 +10,8 @@ namespace StreamControlLite.Settings
             String videoCodec = StreamSettings.VideoDecoder.GetDecoderCommandLine();
             String audioCodec = StreamSettings.AudioDecoder.GetDecoderCommandLine();
             String filters = $" -vf \"{Decorator.instance().GetCommandLine()}\" ";
-            
-            return $"-re -loglevel error {input} {videoCodec} {audioCodec} {filters} -f flv tcp://127.0.0.1:{StreamSettings.InternalCommunicationPort}";
+            string otherOptions = " -flags low_delay -movflags +faststart -bsf:v h264_mp4toannexb ";
+            return $"-re -loglevel error {input} {videoCodec} {audioCodec} {filters} {otherOptions} -f flv tcp://127.0.0.1:{StreamSettings.InternalCommunicationPort}";
         }
     }
 }
