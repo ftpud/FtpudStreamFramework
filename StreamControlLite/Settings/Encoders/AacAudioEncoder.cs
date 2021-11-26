@@ -2,18 +2,18 @@
 
 namespace StreamControlLite.Settings.Decoders
 {
-    public class AacAudioDecoder : BaseAudioDecoder
+    public class AacAudioEncoder : BaseAudioEncoder
     {
         private int _bitrate;
         private int _rate;
         
-        public AacAudioDecoder(int bitrate, int rate)
+        public AacAudioEncoder(int bitrate, int rate)
         {
             _bitrate = bitrate;
             _rate = rate;
         }
 
-        public override String GetDecoderCommandLine()
+        public override String GetEncoderCommandLine()
         {
             return $" -b:a {_bitrate}k -c:a aac -ar {_rate} -ac 2 ";
         }

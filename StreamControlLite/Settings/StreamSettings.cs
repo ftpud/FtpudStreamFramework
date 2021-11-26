@@ -10,8 +10,8 @@ namespace StreamControlLite.Settings
     {
         // User definable settings
 
-        public static BaseVideoDecoder VideoDecoder { get; set; }
-        public static BaseAudioDecoder AudioDecoder { get; set; }
+        public static BaseVideoEncoder VideoEncoder { get; set; }
+        public static BaseAudioEncoder AudioEncoder { get; set; }
 
         public static LogLevel LogLevel { get; set; } = LogLevel.Verbose;
 

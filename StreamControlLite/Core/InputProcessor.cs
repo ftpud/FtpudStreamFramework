@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using StreamControlLite.Source;
-using StreamControlLite.Util;
 
 namespace StreamControlLite.Core
 {
@@ -13,7 +12,7 @@ namespace StreamControlLite.Core
         
         public void Play(SourceEntity input)
         {
-            // kill old thread
+            // kill old process
             Stop();
             
             // create and start new
@@ -23,7 +22,7 @@ namespace StreamControlLite.Core
         
         public void Stop()
         {
-            // kill old thread
+            // kill old process
             if (_inputConverterProcess != null && !_inputConverterProcess.HasExited)
             {
                 // kill
@@ -49,19 +48,17 @@ namespace StreamControlLite.Core
             startInfo.Arguments = sourceEntity.ProvideSource();
             startInfo.RedirectStandardInput = true;
             startInfo.RedirectStandardOutput = true;
-            //startInfo.UseShellExecute = false;
             converterProcess.StartInfo = startInfo;
             converterProcess.Start();
             _converterStdIn = converterProcess.StandardInput;
             converterProcess.WaitForExit();
-            //ConsoleUtil.ExecuteBackgroundProcess("ffmpeg", sourceEntity.ProvideSource());
-            if (onFinished != null)
+            if (OnFinished != null)
             {
-                onFinished.Invoke(this, EventArgs.Empty);
+                OnFinished.Invoke(this, EventArgs.Empty);
             }
         }
 
-        public event EventHandler<EventArgs> onFinished; 
+        public event EventHandler<EventArgs> OnFinished; 
 
         private static InputProcessor _instance;
         public static InputProcessor Instance()

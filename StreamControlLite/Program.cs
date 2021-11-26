@@ -16,8 +16,8 @@ namespace StreamControlLite
         {
             LogUtils.Log(LogLevel.Verbose,"Init");
 
-            StreamSettings.AudioDecoder = new AacAudioDecoder(320, 44100);
-            StreamSettings.VideoDecoder = new NvencVideoDecoder(8000, 30);
+            StreamSettings.AudioEncoder = new AacAudioEncoder(320, 44100);
+            StreamSettings.VideoEncoder = new NvencVideoEncoder(8000, 30);
             
             Decorator.instance().AddGlobalFilter(new ScaleFilter(1920, 1080));
             Decorator.instance().AddGlobalFilter(new PadFilter(1920, 1080));
@@ -40,7 +40,7 @@ namespace StreamControlLite
             };
 
             int listNum = 0;
-            InputProcessor.Instance().onFinished += (sender, eventArgs) =>
+            InputProcessor.Instance().OnFinished += (sender, eventArgs) =>
             {
                 listNum++;
                 if (listNum == playList.Count) listNum = 0;

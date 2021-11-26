@@ -2,9 +2,9 @@
 
 namespace StreamControlLite.Settings.Decoders
 {
-    public class BaseVideoDecoder
+    public class BaseVideoEncoder
     {
-        public virtual String GetDecoderCommandLine()
+        public virtual String GetEncoderCommandLine()
         {
             throw new NotImplementedException();
         }
