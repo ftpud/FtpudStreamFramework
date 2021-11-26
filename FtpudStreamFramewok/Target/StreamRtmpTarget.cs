@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StreamControlLite.Target
+namespace FtpudStreamFramewok.Target
 {
     public class StreamRtmpTarget : StreamTarget
     {

@@ -1,10 +1,7 @@
-﻿using System;
-using Microsoft.VisualBasic;
-using StreamControlLite.Core;
-using StreamControlLite.Settings.Encoders;
-using StreamControlLite.Util;
+﻿using FtpudStreamFramewok.Settings.Encoders;
+using FtpudStreamFramewok.Util;
 
-namespace StreamControlLite.Settings
+namespace FtpudStreamFramewok.Settings
 {
     public static class StreamSettings
     {

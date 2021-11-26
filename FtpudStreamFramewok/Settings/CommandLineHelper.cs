@@ -1,7 +1,7 @@
 ﻿using System;
-using StreamControlLite.Settings.Filters;
+using FtpudStreamFramewok.Settings.Filters;
 
-namespace StreamControlLite.Settings
+namespace FtpudStreamFramewok.Settings
 {
     public class CommandLineHelper
     {

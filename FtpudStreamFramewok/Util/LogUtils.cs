@@ -1,7 +1,7 @@
 ﻿using System;
-using StreamControlLite.Settings;
+using FtpudStreamFramewok.Settings;
 
-namespace StreamControlLite.Util
+namespace FtpudStreamFramewok.Util
 {
     public enum LogLevel
     {

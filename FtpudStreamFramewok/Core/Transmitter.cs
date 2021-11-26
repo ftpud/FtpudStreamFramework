@@ -3,10 +3,10 @@ using System.Buffers.Binary;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using StreamControlLite.Settings;
-using StreamControlLite.Util;
+using FtpudStreamFramewok.Settings;
+using FtpudStreamFramewok.Util;
 
-namespace StreamControlLite.Core
+namespace FtpudStreamFramewok.Core
 {
     public class Transmitter
     {

@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
-using StreamControlLite.Source;
+using FtpudStreamFramewok.Source;
 
-namespace StreamControlLite.Core
+namespace FtpudStreamFramewok.Core
 {
     public class InputProcessor
     {

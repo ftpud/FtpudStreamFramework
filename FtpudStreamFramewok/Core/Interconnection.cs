@@ -1,9 +1,8 @@
-﻿using System;
-using System.IO.Pipes;
+﻿using System.IO.Pipes;
 using System.Threading;
-using StreamControlLite.Util;
+using FtpudStreamFramewok.Util;
 
-namespace StreamControlLite.Core
+namespace FtpudStreamFramewok.Core
 {
     public class Interconnection
     {

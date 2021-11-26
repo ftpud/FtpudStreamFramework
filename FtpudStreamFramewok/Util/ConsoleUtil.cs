@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace StreamControlLite.Util
+namespace FtpudStreamFramewok.Util
 {
     public class ConsoleUtil
     {

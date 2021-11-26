@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Buffers.Binary;
-using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace StreamControlLite.Core
+namespace FtpudStreamFramewok.Core
 {
 
     public class FlvFrame

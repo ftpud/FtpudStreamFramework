@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace StreamControlLite.Settings.Filters
+namespace FtpudStreamFramewok.Settings.Filters
 {
 
     public class TextFilterOption

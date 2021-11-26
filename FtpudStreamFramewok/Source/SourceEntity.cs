@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StreamControlLite.Source
+namespace FtpudStreamFramewok.Source
 {
     public class SourceEntity
     {

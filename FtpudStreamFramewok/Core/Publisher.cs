@@ -1,10 +1,9 @@
 ﻿using System;
-using System.IO.Pipes;
 using System.Threading;
-using StreamControlLite.Target;
-using StreamControlLite.Util;
+using FtpudStreamFramewok.Target;
+using FtpudStreamFramewok.Util;
 
-namespace StreamControlLite.Core
+namespace FtpudStreamFramewok.Core
 {
     public class Publisher
     {

@@ -2,7 +2,7 @@
 using System.Buffers.Binary;
 using System.Linq;
 
-namespace StreamControlLite.Core
+namespace FtpudStreamFramewok.Core
 {
     public class FlvUtils
     {

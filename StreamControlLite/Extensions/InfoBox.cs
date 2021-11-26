@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using Microsoft.VisualBasic;
-using StreamControlLite.Settings.Filters;
-using StreamControlLite.Util;
+using FtpudStreamFramewok.Settings.Filters;
+using FtpudStreamFramewok.Util;
+
 
 namespace StreamControlLite.Extensions
 {
@@ -20,7 +19,7 @@ namespace StreamControlLite.Extensions
     {
         public void Init()
         {
-            File.WriteAllText("live.txt", "test");
+            File.WriteAllText("live.txt", " ");
             Decorator.instance().AddGlobalFilter(new TextFilter(new[]
             {
                 new TextFilterOption(TextFilterOption.OptionName.textfile, "live.txt"),

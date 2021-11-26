@@ -1,4 +1,4 @@
-﻿namespace StreamControlLite.Settings.Encoders
+﻿namespace FtpudStreamFramewok.Settings.Encoders
 {
     public class NvencVideoEncoder : BaseVideoEncoder
     {

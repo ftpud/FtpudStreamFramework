@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StreamControlLite.Settings.Filters
+namespace FtpudStreamFramewok.Settings.Filters
 {
     public class VideoFilter
     {

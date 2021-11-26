@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
-using StreamControlLite.Settings;
-using StreamControlLite.Settings.Filters;
-using StreamControlLite.Util;
+using FtpudStreamFramewok.Settings;
+using FtpudStreamFramewok.Settings.Filters;
+using FtpudStreamFramewok.Util;
 
-namespace StreamControlLite.Source
+namespace FtpudStreamFramewok.Source
 {
 
     public class FileSourceEntity : SourceEntity

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StreamControlLite.Settings.Filters
+namespace FtpudStreamFramewok.Settings.Filters
 {
 
     public class Decorator

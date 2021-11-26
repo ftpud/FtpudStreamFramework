@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StreamControlLite.Settings.Encoders
+namespace FtpudStreamFramewok.Settings.Encoders
 {
     public class AacAudioEncoder : BaseAudioEncoder
     {

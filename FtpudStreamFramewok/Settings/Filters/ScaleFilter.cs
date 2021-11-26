@@ -1,4 +1,4 @@
-﻿namespace StreamControlLite.Settings.Filters
+﻿namespace FtpudStreamFramewok.Settings.Filters
 {
     public class ScaleFilter : VideoFilter
     {
