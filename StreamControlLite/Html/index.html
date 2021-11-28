@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-7 col-sm-6">
-                    <h2>Тут что-то будет</h2>
+                    <h2>Item list</h2>
                 </div>
             </div>
             <div class="row">
@@ -38,23 +38,6 @@
 
     <script>
 
-    /*
-
-      function updatePlaylist() {
-            var playlistContainer = $("#playlist");
-
-            $.get("/getList", function(data) {
-
-                var obj = JSON.parse(data);        
-
-                $.each(obj.Playlist, function(k, v) {
-                    playlistContainer.append("<ol class=\"breadcrumb\"><li class=\"breadcrumb-item active\"><a href=#>" + obj.Playlist[k].FileName + "</a></li></ol>");
-                });
-
-            });
-        }
-
-    */
        function updatePlaylist(k) {
         $("#main").html("");
  
