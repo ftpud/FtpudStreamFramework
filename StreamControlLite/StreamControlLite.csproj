@@ -9,4 +9,24 @@
       <ProjectReference Include="..\FtpudStreamFramewok\FtpudStreamFramewok.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Html" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Html\index.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Html\login.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Html\welcome.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

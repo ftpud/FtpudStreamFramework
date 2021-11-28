@@ -7,8 +7,8 @@ namespace FtpudStreamFramewok.Util
     {
         public static void ExecuteBackgroundProcess(string application, String args)
         {
-            LogUtils.Log(LogLevel.Trace, $"Starting process: {application}");
-            LogUtils.Log(LogLevel.Trace, $"Args: {args}");
+            LogUtils.Log(LogLevel.Debug, $"Starting process: {application}");
+            LogUtils.Log(LogLevel.Debug, $"Args: {args}");
             
             var process = new Process();
             var processStartInfo = new ProcessStartInfo()

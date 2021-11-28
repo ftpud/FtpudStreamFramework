@@ -14,8 +14,13 @@ namespace FtpudStreamFramewok.Source
             this._fileName = fileName;
         }
         private string _fileName;
-        
-        public override string ProvideSource()
+
+        public String GetFileName()
+        {
+            return _fileName;
+        }
+
+        public override string ProvideSourceCommandLine()
         {
             LogUtils.Log(LogLevel.Verbose, $"Playing: {_fileName}");
             

@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using FtpudStreamFramewok.Core;
 using FtpudStreamFramewok.Settings;
 using FtpudStreamFramewok.Settings.Encoders;
 using FtpudStreamFramewok.Settings.Filters;
-using FtpudStreamFramewok.Source;
 using FtpudStreamFramewok.Target;
 using FtpudStreamFramewok.Util;
 using StreamControlLite.Extensions;
+using StreamControlLite.Extensions.WebUi;
 
 
 namespace StreamControlLite
@@ -16,7 +15,7 @@ namespace StreamControlLite
     {
         static void Main(string[] args)
         {
-            LogUtils.Log(LogLevel.Verbose,"Init");
+            LogUtils.Log(LogLevel.Debug,"Init");
 
             StreamSettings.AudioEncoder = new AacAudioEncoder(320, 44100);
             StreamSettings.VideoEncoder = new NvencVideoEncoder(8000, 30);
@@ -34,13 +33,16 @@ namespace StreamControlLite
 
             
             MediaLibrary.instance().Init();
-            MediaLibrary.instance().Load("Y:\\wasutahq\\");
+            MediaLibrary.instance().Load("Z:\\_idoling\\up");
             
+            
+            WebUi.instance().Init(8080);
 
             
             // Start
             MediaLibrary.instance().Start();
 
+            
 
             while (true)
             {

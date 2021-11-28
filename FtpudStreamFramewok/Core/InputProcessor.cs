@@ -45,7 +45,7 @@ namespace FtpudStreamFramewok.Core
             converterProcess.StartInfo = startInfo;
             
             startInfo.FileName = "ffmpeg";
-            startInfo.Arguments = sourceEntity.ProvideSource();
+            startInfo.Arguments = sourceEntity.ProvideSourceCommandLine();
             startInfo.RedirectStandardInput = true;
             startInfo.RedirectStandardOutput = true;
             converterProcess.StartInfo = startInfo;
