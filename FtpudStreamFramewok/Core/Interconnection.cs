@@ -12,12 +12,8 @@ namespace FtpudStreamFramewok.Core
 
         public bool AwaitConnections { get; set; } = true;
 
-        //public NamedPipeServerStream NamedPipeServerStream => _namedPipeServerStream;
-        //private NamedPipeServerStream _namedPipeServerStream { get; set; }
-
         public Stream PipeStream => _pipeStream;
         private Stream _pipeStream { get; set; }
-
 
         public string GetPipeFullPath()
         {
