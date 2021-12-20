@@ -40,7 +40,7 @@ namespace FtpudStreamFramewok.Core
 
                         if (!skipHeader)
                         {
-                            Interconnection.instance().NamedPipeServerStream.Write(header);
+                            Interconnection.instance().PipeStream.Write(header);
                             skipHeader = true;
                         }
 
@@ -60,7 +60,7 @@ namespace FtpudStreamFramewok.Core
                             frame.streamId = FlvUtils.ConvertUint24To3Bytes(streamNum);
 
                             
-                            Interconnection.instance().NamedPipeServerStream.Write(frame.CombineFrame);
+                            Interconnection.instance().PipeStream.Write(frame.CombineFrame);
 
 
                             String log = "";

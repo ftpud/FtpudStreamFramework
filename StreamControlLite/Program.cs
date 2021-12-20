@@ -18,7 +18,7 @@ namespace StreamControlLite
             LogUtils.Log(LogLevel.Debug,"Init");
 
             StreamSettings.AudioEncoder = new AacAudioEncoder(320, 44100);
-            StreamSettings.VideoEncoder = new NvencVideoEncoder(8000, 30);
+            StreamSettings.VideoEncoder = new MacM1HWVideoEncoder(8000, 30);
             
             Decorator.instance().AddGlobalFilter(new ScaleFilter(1920, 1080));
             Decorator.instance().AddGlobalFilter(new PadFilter(1920, 1080));
@@ -33,7 +33,7 @@ namespace StreamControlLite
 
             
             MediaLibrary.instance().Init();
-            MediaLibrary.instance().Load("Z:\\_idoling\\up");
+            MediaLibrary.instance().Load("/Users/ftpud/Downloads/");
             
             
             WebUi.instance().Init(8080);

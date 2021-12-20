@@ -13,5 +13,7 @@ namespace FtpudStreamFramewok.Settings
         public static LogLevel LogLevel { get; set; } = LogLevel.Verbose;
 
         public static int InternalCommunicationPort { get; set; } = 5051;
+
+
     }
 }
