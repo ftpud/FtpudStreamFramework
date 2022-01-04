@@ -16,6 +16,7 @@ namespace FtpudStreamFramewok.Core
             Stop();
             
             // create and start new
+            
             _inputConverterThread = new Thread(new ParameterizedThreadStart(ParameterizedThreadStart));
             _inputConverterThread.Start(input);
         }

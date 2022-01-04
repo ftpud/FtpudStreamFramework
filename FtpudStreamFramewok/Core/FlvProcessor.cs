@@ -16,6 +16,8 @@ namespace FtpudStreamFramewok.Core
         public byte[] streamId { get; set; }
         public byte[] data { get; set; }
         
+        public int payloadSizeIntBytes { get; set; }
+        
         public byte[] CombineFrame => FlvUtils.Combine(
             previousFrameSize, 
             type, 
@@ -60,7 +62,8 @@ namespace FtpudStreamFramewok.Core
                 previousFrameSize = sizeOfPrevPacket,
                 timestamp = timestampLower,
                 timestampExtended = timestampUpper,
-                type = packetType
+                type = packetType,
+                payloadSizeIntBytes = payloadSizeIntBytes
             };
         }
         
