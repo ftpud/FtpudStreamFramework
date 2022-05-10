@@ -62,7 +62,9 @@ namespace FtpudStreamFramewok.Core
                         LogUtils.Log(LogLevel.Debug, "Broken pipe");
                     }
 
-                    preservedTs = lastTs;
+
+                    LogUtils.Log(LogLevel.Verbose, "Next Stream Started");
+                    preservedTs = lastTs + 1000;
                     streamNum++;
                 }
             })).Start();

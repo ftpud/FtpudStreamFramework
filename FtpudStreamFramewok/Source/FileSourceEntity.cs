@@ -28,7 +28,7 @@ namespace FtpudStreamFramewok.Source
             {
                 new TextFilter(new []
                 {
-                    new TextFilterOption(TextFilterOption.OptionName.text, Path.GetFileName(_fileName)),
+                    new TextFilterOption(TextFilterOption.OptionName.text, escapeFfString(Path.GetFileName(_fileName))),
                     new TextFilterOption(TextFilterOption.OptionName.fontcolor, "white@0.8"),
                     new TextFilterOption(TextFilterOption.OptionName.fontsize, "35"),
                     new TextFilterOption(TextFilterOption.OptionName.x, "2"),
@@ -40,6 +40,13 @@ namespace FtpudStreamFramewok.Source
             });
             
             return CommandLineHelper.WrapInput($" -i \"{_fileName}\" ");
+        }
+
+        private String escapeFfString(String  input)
+        {
+            return input
+                .Replace("%", "")
+                .Replace("'", "");
         }
     }
 }
