@@ -1,1 +1,1 @@
-Service for looping video files to rtmp using ffmpeg.
+Some kind of framework that allows you to stream media files into rmtp
