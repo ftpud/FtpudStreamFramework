@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreamControlLite", "StreamControlLite\StreamControlLite.csproj", "{CC17F1B2-66FD-40D7-91D5-CC410E576A1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpudStreamFramewok", "FtpudStreamFramewok\FtpudStreamFramewok.csproj", "{183D53F0-7DEE-49F7-9907-5C2B766E3CBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpudStreamFramework", "FtpudStreamFramework\FtpudStreamFramework.csproj", "{183D53F0-7DEE-49F7-9907-5C2B766E3CBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

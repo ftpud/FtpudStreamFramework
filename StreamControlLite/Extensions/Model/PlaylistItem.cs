@@ -1,4 +1,4 @@
-﻿using FtpudStreamFramewok.Source;
+﻿using FtpudStreamFramework.Source;
 
 namespace StreamControlLite.Extensions.Model
 {

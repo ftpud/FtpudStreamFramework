@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
-using FtpudStreamFramewok.Settings.Filters;
-using FtpudStreamFramewok.Util;
+using FtpudStreamFramework.Settings.Filters;
+using FtpudStreamFramework.Util;
 
 
 namespace StreamControlLite.Extensions
@@ -31,6 +31,7 @@ namespace StreamControlLite.Extensions
                 new TextFilterOption(TextFilterOption.OptionName.boxcolor, "black@0.4"),
                 new TextFilterOption(TextFilterOption.OptionName.boxborderw, "4"),
                 new TextFilterOption(TextFilterOption.OptionName.reload, "1"),
+                new TextFilterOption(TextFilterOption.OptionName.fontfile, "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc")
             }));
             
             SetupTimer();
@@ -41,7 +42,7 @@ namespace StreamControlLite.Extensions
 
         private void UpdateMessages()
         {
-            atomicWrite("live.txt", String.Join("\n", messageList.Select(m => m.Message)));
+            atomicWrite("live.txt", String.Join("\n", messageList.Select(m => EscapeFfmpegString(m.Message))));
         }
 
 
@@ -91,6 +92,13 @@ namespace StreamControlLite.Extensions
                     }
                 }
             })).Start();
+        }
+        
+        private String EscapeFfmpegString(String  input)
+        {
+            return input
+                .Replace("%", "")
+                .Replace("'", "");
         }
 
 
